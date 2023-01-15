@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func IsAtty() {
+func IsaTTY() {
 	fileInfo, _ := os.Stdout.Stat()
 	if (fileInfo.Mode() & os.ModeCharDevice) != 0 {
 		fmt.Println("Is a TTY")
